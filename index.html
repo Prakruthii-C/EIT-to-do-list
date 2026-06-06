@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Daily Tasks</h1>
+    <p>Stay organised with your daily task list</p>
+
+    <hr>
+    
+    <div class="status-box">
+        <p>Pending: 6</p>
+        <p>Completed: 0</p>
+    </div>
+    
+    <form>
+        <label for="newtask">Add a task:</label>
+        <input type="text" id="newtask" name="newtask">
+        
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+        </select>
+        
+        <input type="submit" value="Add">
+    </form>
+
+    <ol>
+        <li>
+            Task_1
+            <input type="checkbox" class="completed-btn">
+            <input type="button" class="delete-btn" value="delete">
+        </li>
+        <li>
+            Task_2    
+            <input type="checkbox" class="completed-btn">
+            <input type="button" class="delete-btn" value="delete">
+        </li>
+        <li>
+            Task_3
+            <input type="checkbox" class="completed-btn">
+            <input type="button" class="delete-btn" value="delete">
+        </li>
+        <li>
+            Task_4
+            <input type="checkbox" class="completed-btn">
+            <input type="button" class="delete-btn" value="delete">
+        </li>
+        <li>
+            Task_5
+            <input type="checkbox" class="completed-btn">
+            <input type="button" class="delete-btn" value="delete">
+        </li>
+        <li>
+            Task_6
+            <input type="checkbox" class="completed-btn">
+            <input type="button" class="delete-btn" value="delete">
+        </li>
+    </ol>
+</body>
+</html>

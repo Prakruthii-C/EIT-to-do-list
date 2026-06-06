@@ -1,0 +1,97 @@
+/* Emerald Dark Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d1117; 
+    color: #c9d1d9;
+    padding: 50px;
+    line-height: 1.6;
+}
+
+p { text-align: center; }
+
+h1 {
+    color: #10b981; 
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.status-box {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #10b981; 
+    color: #10b981;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+form {
+    max-width: 650px;
+    margin: 40px auto;
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    
+    /* Flexbox for alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+label { color: #8b949e; font-weight: 600; }
+
+input[type="text"], select {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+input[type="submit"] {
+    background-color: #10b981;
+    color: #0d1117;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+ol { max-width: 550px; margin: 0 auto; }
+
+li {
+    background: #161b22;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #10b981;
+}
+
+.delete-btn {
+    background: transparent;
+    color: #f87171;
+    border: 1px solid #f87171;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover { background: #f87171; color: white; }
+
+.completed-btn { accent-color: #10b981; cursor: pointer; }
