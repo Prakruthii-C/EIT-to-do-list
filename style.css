@@ -1,97 +1,81 @@
-/* Emerald Dark Theme */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background-color: #0d1117; color: #c9d1d9; }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0d1117; 
-    color: #c9d1d9;
-    padding: 50px;
-    line-height: 1.6;
-}
+/* Grid for Sidebar Layout */
+.page-wrapper { display: grid; grid-template-columns: 250px 1fr; min-height: 100vh; }
+.sidebar { background: #161b22; padding: 40px; border-right: 1px solid #30363d; }
+.main-content { padding: 40px; }
+.side-line { border: none; border-top: 3px solid #10b981; width: 50px; margin: 20px 0; }
 
-p { text-align: center; }
+h1 { color: #10b981; margin-bottom: 20px; }
 
-h1 {
-    color: #10b981; 
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.status-box {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    background-color: #161b22;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #10b981; 
-    color: #10b981;
-    font-weight: bold;
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
-}
-
-form {
-    max-width: 650px;
-    margin: 40px auto;
-    background: #161b22;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #30363d;
-    
-    /* Flexbox for alignment */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-label { color: #8b949e; font-weight: 600; }
-
-input[type="text"], select {
-    background: #0d1117;
-    border: 1px solid #30363d;
-    color: white;
-    padding: 10px;
-    border-radius: 6px;
-}
-
-input[type="submit"] {
-    background-color: #10b981;
-    color: #0d1117;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-ol { max-width: 550px; margin: 0 auto; }
-
-li {
-    background: #161b22;
-    padding: 20px;
+/* Progress & Status */
+.status-box { color: #10b981; font-weight: bold; margin-bottom: 20px; }
+.progress-container { max-width: 550px; margin-bottom: 20px; }
+.progress-container label {
+    display: block;
     margin-bottom: 15px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-left: 4px solid #10b981;
+    font-weight: 600;
+}
+.progress-bar-bg { background: #30363d; height: 10px; border-radius: 5px; overflow: hidden; }
+#progress-bar { background: #10b981; height: 100%; transition: width 0.5s ease-in-out; }
+
+/* Task List Styling */
+.lists-wrapper { display: flex; gap: 80px; margin-top: 30px; }
+.lists-wrapper section { flex: 1; }
+.lists-wrapper h2 { margin-bottom: 25px; }
+
+li { 
+    background: #161b22; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    border-radius: 8px; 
+    display: flex; 
+    justify-content: space-between; 
+    border-left: 4px solid #10b981; 
 }
 
+/* Animations */
+@keyframes teamsPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+.completed-anim { animation: teamsPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); border-left: 4px solid #f87171; }
+
+/* Form */
+form { display: flex; gap: 10px; margin-bottom: 30px; }
+input, select, button { padding: 10px; border-radius: 6px; border: 1px solid #30363d; background: #0d1117; color: white; }
+button { background: #10b981; cursor: pointer; }
+
+/* Style the Delete Button */
 .delete-btn {
     background: transparent;
     color: #f87171;
     border: 1px solid #f87171;
-    padding: 6px 12px;
+    padding: 2px 8px;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
-.delete-btn:hover { background: #f87171; color: white; }
+/* Style the Category Tag */
+li span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-.completed-btn { accent-color: #10b981; cursor: pointer; }
+/* Fix the dancing UI elements */
+li div {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Ensures consistent spacing */
+    flex-shrink: 0; /* Prevents the div from shrinking */
+}
+
+#status-display {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}

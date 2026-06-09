@@ -1,64 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>To Do List</title>
+    <meta charset="UTF-8">
+    <title>Daily Task Planner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Daily Tasks</h1>
-    <p>Stay organised with your daily task list</p>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <h1>Daily Tasks</h1>
+            <p>Stay organised with your daily task list</p>
+            <hr class="side-line">
+        </aside>
 
-    <hr>
-    
-    <div class="status-box">
-        <p>Pending: 6</p>
-        <p>Completed: 0</p>
+        <main class="main-content">
+            <div class="status-box">
+                <p id="status-display">0/0 Tasks Done</p>
+            </div>
+
+            <div class="progress-container">
+                <label>Daily Progress:</label>
+                <div class="progress-bar-bg">
+                    <div id="progress-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <form id="task-form">
+                <input type="text" id="newtask" placeholder="Enter task..." required>
+                <select id="category">
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+
+            <div class="lists-wrapper">
+                <section id="pending-section">
+                    <h2>Pending</h2>
+                    <ol id="task-list"></ol>
+                </section>
+                <section id="completed-section">
+                    <h2>Completed</h2>
+                    <ol id="completed-list"></ol>
+                </section>
+            </div>
+        </main>
     </div>
-    
-    <form>
-        <label for="newtask">Add a task:</label>
-        <input type="text" id="newtask" name="newtask">
-        
-        <label for="category">Category:</label>
-        <select id="category" name="category">
-            <option value="work">Work</option>
-            <option value="personal">Personal</option>
-        </select>
-        
-        <input type="submit" value="Add">
-    </form>
-
-    <ol>
-        <li>
-            Task_1
-            <input type="checkbox" class="completed-btn">
-            <input type="button" class="delete-btn" value="delete">
-        </li>
-        <li>
-            Task_2    
-            <input type="checkbox" class="completed-btn">
-            <input type="button" class="delete-btn" value="delete">
-        </li>
-        <li>
-            Task_3
-            <input type="checkbox" class="completed-btn">
-            <input type="button" class="delete-btn" value="delete">
-        </li>
-        <li>
-            Task_4
-            <input type="checkbox" class="completed-btn">
-            <input type="button" class="delete-btn" value="delete">
-        </li>
-        <li>
-            Task_5
-            <input type="checkbox" class="completed-btn">
-            <input type="button" class="delete-btn" value="delete">
-        </li>
-        <li>
-            Task_6
-            <input type="checkbox" class="completed-btn">
-            <input type="button" class="delete-btn" value="delete">
-        </li>
-    </ol>
+    <script src="script.js"></script>
 </body>
 </html>
