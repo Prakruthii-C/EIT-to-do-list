@@ -7,7 +7,7 @@ const statusDisplay = document.getElementById('status-display');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const taskText = document.getElementById('newtask').value;
-    const category = document.getElementById('category').value; // Get selected category
+    const category = document.getElementById('category').value; 
     
     const li = document.createElement('li');
     li.innerHTML = `
@@ -23,7 +23,6 @@ form.addEventListener('submit', (e) => {
     form.reset();
 });
 
-// Add this block to handle the delete button
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('delete-btn')) {
         e.target.closest('li').remove();
@@ -33,7 +32,7 @@ document.addEventListener('click', (e) => {
 
 document.addEventListener('change', (e) => {
     if (e.target.classList.contains('done-check')) {
-        const li = e.target.closest('li'); // Changed from .parentElement
+        const li = e.target.closest('li'); 
         if (e.target.checked) {
             li.classList.add('completed-anim');
             completedList.appendChild(li);
